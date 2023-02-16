@@ -1,20 +1,11 @@
 {
 	"root": true,
-	"extends": ["custom", "neon/node"],
+	"extends": ["custom", "node", "typescript"],
 	"parserOptions": {
 		"project": "**/tsconfig.eslint.json"
 	},
 	"rules": {
-		"import/extensions": [
-			"error",
-			"ignorePackages",
-			{
-				"js": "never",
-				"jsx": "never",
-				"ts": "never",
-				"tsx": "never"
-			}
-		]
+		"import/prefer-default-export": "off"
 	},
 	"ignorePatterns": ["**/dist/*"]
 }
