@@ -1,0 +1,6 @@
+build/
+coverage/
+dist/
+LICENSE
+pnpm-lock.yaml
+.gitignore

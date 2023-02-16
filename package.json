@@ -13,13 +13,18 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-angular": "^17.4.3",
     "eslint-config-custom": "workspace:*",
+    "husky": "^8.0.3",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
-  "packageManager": "pnpm@7.27.0"
+  "packageManager": "pnpm@7.27.0",
+  "dependencies": {
+    "dotenv-cli": "^7.0.0"
+  }
 }

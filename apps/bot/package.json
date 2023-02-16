@@ -1,0 +1,31 @@
+{
+	"name": "bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon",
+		"start": "node .",
+		"build": "tsc --build",
+		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .js,.ts --format=pretty",
+		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .js,.ts --format=pretty"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^17.0.12",
+		"cross-env": "^7.0.3",
+		"nodemon": "^2.0.20",
+		"ts-node": "^10.9.1",
+		"tsconfig": "workspace:*",
+		"tslib": "^2.5.0"
+	},
+	"dependencies": {
+		"@sapphire/decorators": "^6.0.0",
+		"@sapphire/discord.js-utilities": "^6.0.1",
+		"@sapphire/framework": "^4.1.0",
+		"discord.js": "^14.7.1"
+	}
+}

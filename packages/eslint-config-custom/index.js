@@ -1,7 +1,9 @@
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
-  rules: {
-    "@next/next/no-html-link-for-pages": "off",
-    "react/jsx-key": "off",
-  },
+	extends: ['neon/common', 'neon/typescript', 'neon/prettier', 'turbo'],
+	rules: {
+		'@typescript-eslint/consistent-type-definitions': [
+			'error',
+			'interface',
+		],
+	},
 };
