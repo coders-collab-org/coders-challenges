@@ -1,6 +1,6 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"globalDependencies": ["**/.env.*local"],
+	"globalDependencies": ["**/.env"],
 	"globalEnv": ["BOT_TOKEN", "SERVER_DEV_ID"],
 	"pipeline": {
 		"build": {
