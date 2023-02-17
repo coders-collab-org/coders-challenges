@@ -8,13 +8,14 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "dotenv -- turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.3",
     "@commitlint/config-angular": "^17.4.3",
+    "@typescript-eslint/eslint-plugin": "5.52.0",
     "eslint-config-custom": "workspace:*",
     "husky": "^8.0.3",
     "prettier": "latest",
