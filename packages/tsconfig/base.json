@@ -25,7 +25,6 @@
 		"inlineSources": true,
 		"noEmitHelpers": true,
 		"skipLibCheck": true,
-		"outDir": "dist",
 		"preserveConstEnums": true,
 		"removeComments": false,
 		"sourceMap": true,
@@ -38,5 +37,5 @@
 		"target": "ES2021",
 		"useDefineForClassFields": true
 	},
-	"exclude": ["node_modules"]
-}
+	"exclude": ["node_modules"]
+}
