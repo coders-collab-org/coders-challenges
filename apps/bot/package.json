@@ -5,11 +5,14 @@
 	"main": "src/index.ts",
 	"type": "module",
 	"scripts": {
-		"dev": "nodemon",
+		"dev": "nodemon --experimental-specifier-resolution=node src/index.ts",
 		"start": "node .",
 		"build": "tsc --build",
 		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext .js,.ts --format=pretty",
-		"format": "prettier --write . && cross-env TIMING=1 eslint src --ext .js,.ts --format=pretty"
+		"fmt": "prettier --write . && cross-env TIMING=1 eslint src --ext .js,.ts --format=pretty",
+		"db:gen": "prisma generate",
+		"db:pull": "prisma db pull",
+		"db:push": "prisma db push"
 	},
 	"keywords": [],
 	"author": "",
@@ -19,14 +22,17 @@
 		"cross-env": "^7.0.3",
 		"eslint-config-custom": "workspace:*",
 		"nodemon": "^2.0.20",
+		"prisma": "4.10.1",
 		"ts-node": "^10.9.1",
 		"tsconfig": "workspace:*",
 		"tslib": "^2.5.0"
 	},
 	"dependencies": {
+		"@prisma/client": "4.10.1",
 		"@sapphire/decorators": "^6.0.0",
 		"@sapphire/discord.js-utilities": "^6.0.1",
 		"@sapphire/framework": "^4.1.0",
+		"@sapphire/plugin-subcommands": "4.0.0",
 		"discord.js": "^14.7.1",
 		"eslint-config-node": "^4.1.0",
 		"eslint-config-typescript": "^3.0.0"

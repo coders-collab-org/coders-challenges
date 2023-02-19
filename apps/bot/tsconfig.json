@@ -1,11 +1,14 @@
 {
 	"extends": "tsconfig/base.json",
-	"include": ["**/src", "**/env.d.ts"],
-	"exclude": ["node_modules"],
+	"include": ["src", "env.d.ts", "global.d.ts"],
 	"compilerOptions": {
-		"moduleResolution": "node"
+		"moduleResolution": "node",
+		"outDir": "./build"
 	},
 	"ts-node": {
-		"esm": true
-	}
+		"esm": true,
+
+		"files": true
+	},
+	"files": ["src", "env.d.ts", "global.d.ts"]
 }
