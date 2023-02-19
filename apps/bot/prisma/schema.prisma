@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Challenge {
+  id         BigInt    @id @default(autoincrement())
+  name       String
+  content    String
+  created_by String
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  examples   Example[]
+
+  @@map("challenges")
+}
+
+model Example {
+  id           BigInt     @id @default(autoincrement())
+  challenge_id BigInt?
+  function     String
+  arguments    Json       @default("{}")
+  output       String     @default("")
+  created_at   DateTime   @default(now()) @db.Timestamptz(6)
+  challenge    Challenge? @relation(fields: [challenge_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("examples")
+}
+
+model Guild {
+  id         String    @id
+  settings   Json      @default("{}")
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+
+  @@map("guilds")
+}
