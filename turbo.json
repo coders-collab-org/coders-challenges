@@ -1,18 +1,26 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"globalDependencies": ["**/.env"],
-	"globalEnv": ["BOT_TOKEN", "SERVER_DEV_ID"],
+	"globalEnv": ["BOT_TOKEN", "SERVER_ID", "DATABASE_URL"],
 	"pipeline": {
 		"build": {
 			"dependsOn": ["^build"],
-			"outputs": ["dist/**", ".next/**"]
+			"outputs": ["dist/**", ".next/**", "build/**"]
 		},
 		"lint": {
 			"outputs": []
 		},
 		"dev": {
 			"cache": false
+		},
+		"db:gen": {
+			"cache": false
+		},
+		"db:pull": {
+			"cache": false
+		},
+		"db:push": {
+			"cache": false
 		}
 	}
 }
-
