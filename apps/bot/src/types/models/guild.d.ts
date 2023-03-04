@@ -1,3 +1,3 @@
 export interface GuildSettings {
-	challenges_channels: string | null;
+	challenges_channel: string | null;
 }

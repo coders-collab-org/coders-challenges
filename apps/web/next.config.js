@@ -1,4 +1,13 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["ui"],
-};
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
+  images: {
+    domains: ["cdn.discordapp.com"]
+  }
+}
+
+module.exports = nextConfig
