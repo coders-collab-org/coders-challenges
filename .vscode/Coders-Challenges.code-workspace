@@ -5,25 +5,17 @@
 			"path": ".."
 		},
 		{
-			"name": "🚀 bot",
+			"name": "🚀 rest",
+			"path": "../apps/rest"
+		},
+		{
+			"name": "🤖 bot",
 			"path": "../apps/bot"
-		},
-		{
-			"name": "🚀 web",
-			"path": "../apps/web"
-		},
-		{
-			"name": "📦 eslint-config-custom",
-			"path": "../packages/eslint-config-custom"
 		},
 		{
 			"name": "📦 tsconfig",
 			"path": "../packages/tsconfig"
 		},
-		{
-			"name": "📦 ui",
-			"path": "../packages/ui"
-		}
 	],
 	"settings": {}
 }
