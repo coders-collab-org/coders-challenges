@@ -10,5 +10,5 @@
 
 		"files": true
 	},
-	"files": ["src", "env.d.ts", "global.d.ts"]
+	"files": ["env.d.ts", "global.d.ts"]
 }
