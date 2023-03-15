@@ -4,7 +4,7 @@ import { ApplyOptions } from '@sapphire/decorators';
 import { Subcommand } from '@sapphire/plugin-subcommands';
 import {
 	ActionRowBuilder,
-	ModalActionRowComponentBuilder,
+	type ModalActionRowComponentBuilder,
 	ModalBuilder,
 	TextInputBuilder,
 	TextInputStyle,
