@@ -17,11 +17,10 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
-
+		"verbatimModuleSyntax": true,
 		"declaration": true,
 		"declarationMap": true,
 		"importHelpers": true,
-		"importsNotUsedAsValues": "error",
 		"inlineSources": true,
 		"noEmitHelpers": true,
 		"skipLibCheck": true,
@@ -37,5 +36,5 @@
 		"target": "ES2021",
 		"useDefineForClassFields": true
 	},
-	"exclude": ["node_modules"]
-}
+	"exclude": ["node_modules"]
+}
