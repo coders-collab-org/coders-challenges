@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Guild {
+    id       BigInt @unique()
+    settings Json
+}
+
+model User {
+    id                   BigInt            @id @unique()
+    points               Int
+    solved_challenges    SolvedChallenge[]
+    published_challenges Challenge[]
+    Auth                 Auth?
+}
+
+model Challenge {
+    id          BigInt            @id @unique()
+    title       String
+    difficulty  Difficulties
+    tags        String[]
+    description String
+    status      String
+    created_at  DateTime
+    end_at      DateTime
+    points      Int
+    author      User              @relation(fields: [author_id], references: [id])
+    author_id   BigInt            @unique()
+    solvers     SolvedChallenge[]
+    unit_tests  UnitTest[]
+}
+
+model Auth {
+    user          User   @relation(fields: [user_id], references: [id])
+    user_id       BigInt @unique()
+    access_token  String @unique()
+    refresh_token String @unique()
+}
+
+model SolvedChallenge {
+    solver       User      @relation(fields: [solver_id], references: [id])
+    solver_id    BigInt    @unique()
+    challenge    Challenge @relation(fields: [challenge_id], references: [id])
+    challenge_id BigInt    @unique()
+}
+
+model UnitTest {
+    id           BigInt       @id @unique()
+    name         String
+    challenge    Challenge    @relation(fields: [challenge_id], references: [id])
+    challenge_id BigInt       @unique()
+    languages    Language[]
+    difficulty   Difficulties
+    code         String
+}
+
+model Language {
+    name           String     @id @unique()
+    runtime_engine String
+    unit_tests     UnitTest[]
+}
+
+enum Difficulties {
+    Easy
+    medium
+    Hard
+}

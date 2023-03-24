@@ -68,6 +68,7 @@ importers:
       '@nestjs/platform-express': ^9.0.0
       '@nestjs/schematics': ^9.0.0
       '@nestjs/testing': ^9.0.0
+      '@prisma/client': 4.10.1
       '@types/express': ^4.17.13
       '@types/jest': 29.2.4
       '@types/node': 18.11.18
@@ -79,6 +80,7 @@ importers:
       eslint-plugin-prettier: ^4.0.0
       jest: 29.3.1
       prettier: ^2.3.2
+      prisma: 4.10.1
       reflect-metadata: ^0.1.13
       rxjs: ^7.2.0
       source-map-support: ^0.5.20
@@ -93,6 +95,7 @@ importers:
       '@nestjs/common': 9.3.9_mnr6j2del53muneqly5h4y27ai
       '@nestjs/core': 9.3.9_q6agyr4hwia55oswpsa7zjxcpm
       '@nestjs/platform-express': 9.3.9_77foi4w27ghy47yutmnzv7krjy
+      '@prisma/client': 4.10.1_prisma@4.10.1
       reflect-metadata: 0.1.13
       rxjs: 7.8.0
     devDependencies:
@@ -110,6 +113,7 @@ importers:
       eslint-plugin-prettier: 4.2.1_u2zha4kiojzs42thzpgwygphmy
       jest: 29.3.1_zfha7dvnw4nti6zkbsmhmn6xo4
       prettier: 2.8.4
+      prisma: 4.10.1
       source-map-support: 0.5.21
       supertest: 6.3.3
       ts-jest: 29.0.3_emtz7bspl3w44yuglrfo66r3kq
