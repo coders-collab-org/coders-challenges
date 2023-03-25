@@ -16,7 +16,6 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
-		"verbatimModuleSyntax": true,
 		"declaration": true,
 		"declarationMap": true,
 		"importHelpers": true,
