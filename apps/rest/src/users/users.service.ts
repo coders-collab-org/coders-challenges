@@ -1,6 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
-import { PrismaClient, User } from "@prisma/client"
+import { PrismaClient, User } from '@prisma/client'
 import { topType } from './types/types'
+import prismaClient from 'prisma'
 
 const prisma = new PrismaClient()
 
@@ -32,7 +33,7 @@ export class UsersService {
         // Find User in DB by id
         const user = await prisma.user.findUnique({
             where: {
-                id: id
+                id: BigInt(id)
             }
         })
         // If User in DB then return User

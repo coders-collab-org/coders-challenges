@@ -1,7 +1,8 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { PrismaClient, Guild } from '@prisma/client'
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
+import { Guild } from '@prisma/client'
+import prismaClient from 'prisma'
 
-const prisma = new PrismaClient()
+const prisma = prismaClient
 
 @Injectable()
 export class GuildsService {

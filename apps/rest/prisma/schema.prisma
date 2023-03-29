@@ -13,6 +13,7 @@ datasource db {
 model Guild {
     id       BigInt @unique()
     settings Json
+    @@map("guilds")
 }
 
 model User {
@@ -21,6 +22,7 @@ model User {
     solved_challenges    SolvedChallenge[]
     published_challenges Challenge[]
     Auth                 Auth?
+    @@map("users")
 }
 
 model Challenge {
@@ -37,6 +39,7 @@ model Challenge {
     author_id   BigInt            @unique()
     solvers     SolvedChallenge[]
     unit_tests  UnitTest[]
+    @@map("challenges")
 }
 
 model Auth {
@@ -44,6 +47,7 @@ model Auth {
     user_id       BigInt @unique()
     access_token  String @unique()
     refresh_token String @unique()
+    @@map("auths")
 }
 
 model SolvedChallenge {
@@ -51,6 +55,7 @@ model SolvedChallenge {
     solver_id    BigInt    @unique()
     challenge    Challenge @relation(fields: [challenge_id], references: [id])
     challenge_id BigInt    @unique()
+    @@map("solved_challenges")
 }
 
 model UnitTest {
@@ -61,12 +66,14 @@ model UnitTest {
     languages    Language[]
     difficulty   Difficulties
     code         String
+    @@map("unit_tests")
 }
 
 model Language {
     name           String     @id @unique()
     runtime_engine String
     unit_tests     UnitTest[]
+    @@map("languages")
 }
 
 enum Difficulties {
