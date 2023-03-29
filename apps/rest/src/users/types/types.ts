@@ -1,0 +1,1 @@
+export type topType = "points" | "published challenges"
